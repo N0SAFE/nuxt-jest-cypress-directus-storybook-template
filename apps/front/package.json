@@ -1,0 +1,22 @@
+{
+    "name": "front",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "test": "npm run test:e2e",
+        "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress",
+        "cypress": "cypress run"
+    },
+    "devDependencies": {
+        "cypress": "^12.1.0",
+        "nuxt": "3.0.0",
+        "start-server-and-test": "^1.15.2"
+    },
+    "dependencies": {
+        "ui": "*"
+    }
+}

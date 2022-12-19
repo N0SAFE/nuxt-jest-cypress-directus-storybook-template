@@ -1,0 +1,26 @@
+{
+  "name": "ui",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0",
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.14",
+    "babel-loader": "^8.3.0",
+    "vue-loader": "^16.8.3",
+    "cross-env": "^7.0.3"
+  }
+}
