@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "turbo run dev --parallel",
+    "open:dev": "turbo run open:dev",
+    "start": "turbo run start --parallel",
     "build": "npm run build:all",
     "build:all": "turbo run build --parallel",
     "test": "turbo run test --color --output-logs=new-only",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    "update": "turbo run update",
+    "open:all": "npm run open -ws --silent"
   },
   "workspaces": [
     "apps/**",
@@ -20,5 +24,12 @@
   "dependencies": {
     "turbo": "^1.6.3",
     "vue-server-renderer": "^2.7.14"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=17.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

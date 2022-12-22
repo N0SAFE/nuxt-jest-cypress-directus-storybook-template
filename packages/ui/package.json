@@ -7,9 +7,14 @@
     "build": "npm run build:storybook",
     "build:storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' build-storybook",
     "dev": "npm run storybook",
+    "start": "npm run storybook",
     "postinstall": "nuxt prepare",
-    "storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue}\""
+    "storybook": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006 --ci",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue}\"",
+    "open:dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
+    "open": "open http://localhost:6006 || start http://localhost:6006 || xdg-open http://localhost:6006",
+    "prepare": "npm run build:storybook && nuxt prepare",
+    "update": "npx storybook upgrade && npx storybook@next automigrate"
   },
   "prettier": "packages/tools/.prettierrc.json",
   "devDependencies": {
@@ -33,6 +38,7 @@
     "vue-loader": "^16.8.3"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vue/test-utils": "^2.2.6",
     "@vue/vue3-jest": "^29.2.2",
     "babel-jest": "^29.3.1",

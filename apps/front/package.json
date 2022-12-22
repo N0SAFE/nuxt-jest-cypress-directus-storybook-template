@@ -3,13 +3,18 @@
     "private": true,
     "scripts": {
         "build": "nuxt build",
-        "dev": "nuxt dev",
+        "dev": "nuxt dev --port 3000",
+        "start": "nuxt start --port 3000",
+        "open:dev": "nuxt dev --port 3000 --open",
         "generate": "nuxt generate",
-        "preview": "nuxt preview",
+        "preview": "nuxt preview --port 3000",
         "postinstall": "nuxt prepare",
         "test": "npm run test:e2e",
         "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress",
-        "cypress": "cypress run"
+        "cypress": "cypress run --headed",
+        "test:e2e:full": "start-server-and-test dev http-get://localhost:3000 cypress:full",
+        "cypress:full": "cypress run --browser firefox --headed && cypress run --browser electron --headed && cypress run --browser chrome --headed && cypress run --browser edge --headed",
+        "open": "open http://localhost:3000 || xdg-open http://localhost:3000 || start http://localhost:3000"
     },
     "devDependencies": {
         "cypress": "^12.1.0",

@@ -4,14 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "start-server-and-test dev http-get://0.0.0.0:8055 jest",
+    "jest": "jest",
+    "update": "npm update && npx directus database migrate:latest",
     "dev": "npx directus start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "open:dev": "start-server-and-test dev http-get://0.0.0.0:8055 open",
+    "start": "npm run update && npm run dev",
+    "open": "open http://localhost:8055 || xdg-open http://localhost:8055 || start http://localhost:8055"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.6.0",
     "directus": "^9.21.2",
+    "dotenv": "^16.0.3",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "pactum": "^3.3.2"
   }
 }

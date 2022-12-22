@@ -3,13 +3,17 @@
     "pipeline": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**", ".nuxt/**", ".output/**", "storybook-static", "node_modules/.cache/**"]
+            "outputs": ["^dist/**", "^.nuxt/**", "^.output/**", "^node_modules/.cache/**", "^node_modules/.vite/**"]
         },
         "lint": {
             "outputs": []
         },
         "dev": {
             "cache": false
+        },
+        "start": {
+            "cache": false,
+            "dependsOn": ["^build"]
         },
         "test": {
             "outputs": ["coverage/**", "cypress/screenshots/**", "cypress/videos/**", "jest/**", "test-results/**"],
@@ -36,6 +40,12 @@
         },
         "clean": {
             "outputs": []
+        },
+        "update": {
+            "outputs": []
+        },
+        "open:dev": {
+            "cache": false
         }
     },
     "globalDependencies": [".env", "tsconfig.json"]
