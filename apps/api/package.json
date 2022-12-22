@@ -23,6 +23,10 @@
   },
   "devDependencies": {
     "jest": "^29.3.1",
-    "pactum": "^3.3.2"
+    "pactum": "^3.3.2",
+    "jest-html-reporter": "^3.7.0",
+    "jest-css-modules-transform": "^4.4.2",
+    "ts-jest": "^29.0.3",
+    "babel-jest": "^29.3.1"
   }
 }

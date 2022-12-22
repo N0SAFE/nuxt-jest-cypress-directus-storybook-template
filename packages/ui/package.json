@@ -34,17 +34,18 @@
     "cross-env": "^7.0.3",
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^29.3.1",
+    "jest-html-reporter": "^3.7.0",
     "nuxt": "3.0.0",
-    "vue-loader": "^16.8.3"
+    "vue-loader": "^16.8.3",
+    "ts-jest": "^29.0.3",
+    "babel-jest": "^29.3.1"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/test-utils": "^2.2.6",
     "@vue/vue3-jest": "^29.2.2",
-    "babel-jest": "^29.3.1",
     "jest": "^29.3.1",
     "prettier": "^2.8.1",
-    "sass": "^1.57.0",
-    "ts-jest": "^29.0.3"
+    "sass": "^1.57.0"
   }
 }

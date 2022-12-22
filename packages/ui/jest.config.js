@@ -12,4 +12,11 @@ module.exports = {
     ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform",
   },
   moduleFileExtensions: ["vue", "js", "json", "ts", "tsx", "jsx"],
+  reporters: [
+    "default",
+    ["jest-html-reporter", {
+      "outputPath": "jest/test-report.html",
+      "pageTitle": "Test Report"
+    }]
+  ]
 };
