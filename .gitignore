@@ -12,3 +12,5 @@ dist
 storybook-static/
 cypress/
 !cypress/e2e
+
+jest/test-report.html

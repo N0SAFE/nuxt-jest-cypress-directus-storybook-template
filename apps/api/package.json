@@ -9,7 +9,7 @@
     "update": "npm update && npx directus database migrate:latest",
     "dev": "npx directus start",
     "open:dev": "start-server-and-test dev http-get://0.0.0.0:8055 open",
-    "start": "npm run update && npm run dev",
+    "start": "cross-env SERVE_APP=false npx directus start",
     "open": "open http://localhost:8055 || xdg-open http://localhost:8055 || start http://localhost:8055"
   },
   "keywords": [],
